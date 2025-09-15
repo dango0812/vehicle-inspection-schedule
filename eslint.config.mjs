@@ -6,6 +6,7 @@ import { globalIgnores, defineConfig } from 'eslint/config';
 
 import reactPlugin from 'eslint-plugin-react';
 import stylisticPlugin from '@stylistic/eslint-plugin';
+import tsPlugin from '@typescript-eslint/eslint-plugin';
 import reactHooksPlugin from 'eslint-plugin-react-hooks';
 import reactRefreshPlugin from 'eslint-plugin-react-refresh';
 import noForOfArrayPlugin from 'eslint-plugin-no-for-of-array';
@@ -35,7 +36,10 @@ export default defineConfig([
       sourceType: 'module',
       parser: ts.parser,
       parserOptions: {
-        project: './tsconfig.json',
+        project: [
+          './tsconfig.app.json',
+          './tsconfig.node.json'
+        ],
         tsconfigRootDir: import.meta.dirname,
         ecmaFeatures: {
           jsx: true
@@ -45,6 +49,7 @@ export default defineConfig([
     plugins: {
       'react': reactPlugin,
       '@stylistic': stylisticPlugin,
+      '@typescript-eslint': tsPlugin,
       'no-for-of-array': noForOfArrayPlugin,
     },
     extends: [
