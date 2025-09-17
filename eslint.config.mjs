@@ -5,6 +5,7 @@ import ts from 'typescript-eslint';
 import { globalIgnores, defineConfig } from 'eslint/config';
 
 import reactPlugin from 'eslint-plugin-react';
+import storybookPlugin from "eslint-plugin-storybook";
 import stylisticPlugin from '@stylistic/eslint-plugin';
 import tsPlugin from '@typescript-eslint/eslint-plugin';
 import reactHooksPlugin from 'eslint-plugin-react-hooks';
@@ -55,6 +56,7 @@ export default defineConfig([
     extends: [
       reactHooksPlugin.configs['recommended-latest'],
       reactRefreshPlugin.configs.vite,
+      storybookPlugin.configs['flat/recommended']
     ],
     rules: {
       ...stylisticPlugin.configs.customize({

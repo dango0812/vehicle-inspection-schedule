@@ -8,7 +8,9 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "lint-staged": {
     "*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}": "eslint ."
@@ -18,7 +20,13 @@
     "react-dom": "^19.1.1"
   },
   "devDependencies": {
+    "@chromatic-com/storybook": "4.1.1",
     "@eslint/js": "^9.33.0",
+    "@storybook/addon-a11y": "9.1.6",
+    "@storybook/addon-docs": "9.1.6",
+    "@storybook/addon-onboarding": "9.1.6",
+    "@storybook/addon-vitest": "9.1.6",
+    "@storybook/react-vite": "9.1.6",
     "@stylistic/eslint-plugin": "^5.3.1",
     "@types/eslint": "^9.6.1",
     "@types/react": "^19.1.10",
@@ -32,11 +40,17 @@
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
+    "eslint-plugin-storybook": "9.1.6",
     "globals": "^16.3.0",
     "husky": "^8.0.0",
     "lint-staged": "^16.1.6",
+    "storybook": "9.1.6",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.39.1",
-    "vite": "^7.1.2"
+    "vite": "^7.1.2",
+    "vitest": "^3.2.4",
+    "@vitest/browser": "^3.2.4",
+    "playwright": "^1.55.0",
+    "@vitest/coverage-v8": "^3.2.4"
   }
 }
