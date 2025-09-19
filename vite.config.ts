@@ -1,9 +1,10 @@
 /// <reference types="vitest/config" />
 
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 import { defineConfig } from 'vite';
-import { fileURLToPath } from 'node:url';
+import svgr from 'vite-plugin-svgr';
 
 import react from '@vitejs/plugin-react';
 import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin';
@@ -16,7 +17,8 @@ export default defineConfig({
         react(),
         vanillaExtractPlugin({
             identifiers: ({ hash }) => `vis_${hash}`
-        })
+        }),
+        svgr()
     ],
     test: {
         projects: [{
