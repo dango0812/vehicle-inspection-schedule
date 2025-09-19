@@ -1,177 +1,19 @@
+import font from './font';
+import colors from './colors';
+import radius from './radius';
+import breakpoints from './breakpoints';
+import { gap, padding, margin } from './spacing';
+import shadow from './shadow';
+
 const tokens = {
-    color: {
-        black: '#000',
-        white: '#fff',
-        whiteOpacity50: 'rgba(209,209,253,0.05)',
-        whiteOpacity100: 'rgba(217,217,255,0.11)',
-        whiteOpacity200: 'rgba(222,222,255,0.19)',
-        whiteOpacity300: 'rgba(224,224,255,0.27)',
-        whiteOpacity400: 'rgba(232,232,253,0.36)',
-        whiteOpacity500: 'rgba(242,242,255,0.47)',
-        whiteOpacity600: 'rgba(248,248,255,0.6)',
-        whiteOpacity700: 'rgba(253,253,255,0.75)',
-        whiteOpacity800: 'rgba(253,253,254,0.89)',
-        whiteOpacity900: '#fff',
-
-        grey50: '#f9fafb',
-        grey100: '#f2f4f6',
-        grey200: '#e5e8eb',
-        grey300: '#d1d6db',
-        grey400: '#b0b8c1',
-        grey500: '#8b95a1',
-        grey600: '#6b7684',
-        grey700: '#4e5968',
-        grey800: '#333d4b',
-        grey900: '#191f28',
-        greyOpacity50: 'rgba(0,23,51,0.02)',
-        greyOpacity100: 'rgba(2,32,71,0.05)',
-        greyOpacity200: 'rgba(0,27,55,0.1)',
-        greyOpacity300: 'rgba(0,29,58,0.18)',
-        greyOpacity400: 'rgba(0,25,54,0.31)',
-        greyOpacity500: 'rgba(3,24,50,0.46)',
-        greyOpacity600: 'rgba(0,19,43,0.58)',
-        greyOpacity700: 'rgba(3,18,40,0.7)',
-        greyOpacity800: 'rgba(0,12,30,0.8)',
-        greyOpacity900: 'rgba(2,9,19,0.91)',
-
-        blue50: '#e8f3ff',
-        blue100: '#c9e2ff',
-        blue200: '#90c2ff',
-        blue300: '#64a8ff',
-        blue400: '#4593fc',
-        blue500: '#3182f6',
-        blue600: '#2272eb',
-        blue700: '#1b64da',
-        blue800: '#1957c2',
-        blue900: '#194aa6',
-
-        red50: '#fee',
-        red100: '#ffd4d6',
-        red200: '#feafb4',
-        red300: '#fb8890',
-        red400: '#f66570',
-        red500: '#f04452',
-        red600: '#e42939',
-        red700: '#d22030',
-        red800: '#bc1b2a',
-        red900: '#a51926',
-
-        orange50: '#fff3e0',
-        orange100: '#ffe0b0',
-        orange200: '#ffcd80',
-        orange300: '#ffbd51',
-        orange400: '#ffa927',
-        orange500: '#fe9800',
-        orange600: '#fb8800',
-        orange700: '#f57800',
-        orange800: '#ed6700',
-        orange900: '#e45600',
-
-        yellow50: '#fff9e7',
-        yellow100: '#ffefbf',
-        yellow200: '#ffe69b',
-        yellow300: '#ffdd78',
-        yellow400: '#ffd158',
-        yellow500: '#ffc342',
-        yellow600: '#ffb331',
-        yellow700: '#faa131',
-        yellow800: '#ee8f11',
-        yellow900: '#dd7d02',
-
-        green50: '#f0faf6',
-        green100: '#aeefd5',
-        green200: '#76e4b8',
-        green300: '#3fd599',
-        green400: '#15c47e',
-        green500: '#03b26c',
-        green600: '#02a262',
-        green700: '#029359',
-        green800: '#028450',
-        green900: '#027648',
-
-        teal50: '#edf8f8',
-        teal100: '#bce9e9',
-        teal200: '#89d8d8',
-        teal300: '#58c7c7',
-        teal400: '#30b6b6',
-        teal500: '#18a5a5',
-        teal600: '#109595',
-        teal700: '#0c8585',
-        teal800: '#097575',
-        teal900: '#076565',
-
-        purple50: '#f9f0fc',
-        purple100: '#edccf8',
-        purple200: '#da9bef',
-        purple300: '#c770e4',
-        purple400: '#b44bd7',
-        purple500: '#a234c7',
-        purple600: '#9128b4',
-        purple700: '#8222a2',
-        purple800: '#73228e',
-        purple900: '#65237b'
-    },
-    font: {
-        size: {
-            s12: '0.75rem',
-            s14: '0.875rem',
-            s16: '1rem',
-            s20: '1.25rem',
-            s24: '1.5rem',
-            s30: '1.875rem',
-            s36: '2.25rem',
-            s48: '3rem',
-            s60: '3.75rem'
-        },
-        lineHeight: {
-            tight: '0.85em',
-            regular: '0.95em',
-            medium: '1em',
-            large: '1.25em',
-            extra: '1.4em'
-        },
-        letterSpacing: {
-            tighter: '-0.025rem',
-            tight: '-0.015rem',
-            normal: '0rem',
-            wide: '0.015rem',
-            widest: '0.05rem'
-        },
-        weight: {
-            thin: '100',
-            light: '300',
-            regular: '400',
-            medium: '500',
-            bold: '700'
-        }
-    },
-    radius: {
-        xs: '4px',
-        sm: '8px',
-        md: '12px',
-        lg: '16px',
-        xl: '20px',
-        full: '9999px'
-    },
-    breakpoints: {
-        xs: '375px',
-        sm: '600px',
-        md: '900px',
-        lg: '1200px',
-        xl: '1536px'
-    },
-    spacing: {
-        xs: '4px',
-        sm: '8px',
-        md: '12px',
-        lg: '16px',
-        xl: '20px'
-    },
-    shadow: {
-        s: '0 0 4px 0 var(--color-greyOpacity100), 0 4px 16px 0 var(--color-greyOpacity100)',
-        m: '0 8px 16px 0 var(--color-greyOpacity200), 0 4px 8px 0 var(--color-greyOpacity100)',
-        l: '0 24px 40px 0 var(--color-greyOpacity50), 0 16px 24px 0 var(--color-greyOpacity200), 0 0 8px 0 var(--color-greyOpacity100)'
-    }
+    color: colors,
+    font,
+    radius,
+    breakpoints,
+    gap,
+    padding,
+    margin,
+    shadow
 } as const;
 
 export default tokens;
