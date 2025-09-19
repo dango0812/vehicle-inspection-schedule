@@ -1,10 +1,12 @@
 import { forwardRef } from 'react';
+import clsx from 'clsx';
 import { assignInlineVars } from '@vanilla-extract/dynamic';
 import CircleProgress from '@assets/animation/animation-circle-progress.svg?react';
 import { buttonStyle, buttonTextStyle, loadingWrapper, textVisibleVar, type ButtonVariants } from './style.css';
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     children: React.ReactNode;
+    className?: string;
     variant?: NonNullable<ButtonVariants>['variant'];
     color?: NonNullable<ButtonVariants>['color'];
     size?: NonNullable<ButtonVariants>['size'];
@@ -16,6 +18,7 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     ({
         children,
+        className,
         variant = 'soft',
         color = 'grey',
         size = 'md',
@@ -39,7 +42,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
                 ref={ref}
                 role="button"
                 type="button"
-                className={buttonStyle({ variant, color, size, fullWidth, loading })}
+                className={clsx(buttonStyle({ variant, color, size, fullWidth, loading }), className)}
                 onClick={handleClick}
                 {...rest}
             >
