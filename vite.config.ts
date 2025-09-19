@@ -20,6 +20,14 @@ export default defineConfig({
         }),
         svgr()
     ],
+    resolve: {
+        alias: {
+            '@src': path.resolve(dirname, 'src'),
+            '@components': path.resolve(dirname, 'src/components'),
+            '@assets': path.resolve(dirname, 'src/assets'),
+            '@styles': path.resolve(dirname, 'src/styles')
+        }
+    },
     test: {
         projects: [{
             extends: true,
