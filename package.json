@@ -16,6 +16,8 @@
     "*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}": "eslint ."
   },
   "dependencies": {
+    "@tanstack/react-router": "^1.131.48",
+    "@tanstack/react-router-devtools": "^1.131.48",
     "clsx": "^2.1.1",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
@@ -29,6 +31,7 @@
     "@storybook/addon-vitest": "9.1.6",
     "@storybook/react-vite": "9.1.6",
     "@stylistic/eslint-plugin": "^5.3.1",
+    "@tanstack/router-plugin": "^1.131.48",
     "@types/eslint": "^9.6.1",
     "@types/react": "^19.1.10",
     "@types/react-dom": "^19.1.7",

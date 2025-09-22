@@ -7,6 +7,7 @@ import { defineConfig } from 'vite';
 import svgr from 'vite-plugin-svgr';
 
 import react from '@vitejs/plugin-react';
+import { tanstackRouter } from '@tanstack/router-plugin/vite';
 import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin';
 import { storybookTest } from '@storybook/addon-vitest/vitest-plugin';
 
@@ -14,6 +15,11 @@ const dirname = typeof __dirname !== 'undefined' ? __dirname : path.dirname(file
 
 export default defineConfig({
     plugins: [
+        tanstackRouter({
+            target: 'react',
+            autoCodeSplitting: true,
+            routesDirectory: path.resolve(dirname, 'src/routes')
+        }),
         react(),
         vanillaExtractPlugin({
             identifiers: ({ hash }) => `vis_${hash}`
