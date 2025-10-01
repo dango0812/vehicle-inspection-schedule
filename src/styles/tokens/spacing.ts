@@ -1,9 +1,25 @@
 export const gap = {
-    xs: '4px',
-    sm: '8px',
-    md: '12px',
-    lg: '16px',
-    xl: '20px'
+    g4: '4px',
+    g8: '8px',
+    g12: '12px',
+    g16: '16px',
+    g20: '20px',
+    g24: '24px',
+    g28: '28px',
+    g32: '32px',
+    g36: '36px',
+    g40: '40px',
+    g44: '44px',
+    g48: '48px',
+    g52: '52px',
+    g56: '56px',
+    g60: '60px',
+    g70: '70px',
+    g80: '80px',
+    g100: '100px',
+    g120: '120px',
+    g140: '140px',
+    g160: '160px'
 };
 
 export const padding = {
