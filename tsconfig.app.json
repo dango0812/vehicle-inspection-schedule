@@ -32,5 +32,8 @@
     "noFallthroughCasesInSwitch": true, // switch 문에서 fallthrough 방지
     "noUncheckedSideEffectImports": true // 부수 효과가 있는 import에 대한 검사
   },
-  "include": ["src"]
+  "include": [
+    "src",
+    ".storybook/**/*"
+  ]
 }
