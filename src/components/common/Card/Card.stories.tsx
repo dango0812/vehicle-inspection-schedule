@@ -6,7 +6,7 @@ const meta: Meta<typeof Card> = {
     component: Card,
     tags: ['autodocs'],
     args: {
-        children: '안녕하세요. Card 입니다.',
+        children: 'Card 예요.',
         variant: 'solid',
         color: 'grey',
         size: 'md',
@@ -30,7 +30,7 @@ const meta: Meta<typeof Card> = {
             options: ['sm', 'md', 'lg']
         }
     }
-};
+} satisfies Meta<typeof Card>;
 export default meta;
 
 type Story = StoryObj<typeof Card>;

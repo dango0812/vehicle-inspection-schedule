@@ -30,7 +30,6 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         const handleClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
             if (loading) {
                 e.preventDefault();
-                e.stopPropagation();
                 return;
             }
 

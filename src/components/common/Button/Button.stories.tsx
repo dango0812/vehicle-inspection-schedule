@@ -32,10 +32,10 @@ const meta: Meta<ButtonProps> = {
         loading: false,
         onClick: fn()
     }
-};
+} satisfies Meta<typeof Button>;
 
 export default meta;
-type Story = StoryObj<ButtonProps>;
+type Story = StoryObj<typeof Button>;
 
 export const Default: Story = {};
 

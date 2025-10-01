@@ -6,7 +6,6 @@ export const cardStyle = recipe({
         position: 'relative',
         display: 'flex',
         flexDirection: 'column',
-        width: '100%',
         border: 'none',
         borderRadius: tokens.radius.xl,
         outline: 'none'
