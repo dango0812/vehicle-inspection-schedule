@@ -1,5 +1,5 @@
 import { recipe, type RecipeVariants } from '@vanilla-extract/recipes';
-import tokens from '@styles/tokens';
+import { vars } from '@styles/theme.css';
 
 export const cardStyle = recipe({
     base: {
@@ -7,7 +7,7 @@ export const cardStyle = recipe({
         display: 'flex',
         flexDirection: 'column',
         border: 'none',
-        borderRadius: tokens.radius.xl,
+        borderRadius: vars.radius.xl,
         outline: 'none'
     },
     variants: {
@@ -24,41 +24,41 @@ export const cardStyle = recipe({
         },
         color: {
             grey: {
-                backgroundColor: tokens.color.grey100
+                backgroundColor: vars.color.grey100
             },
             blue: {
-                backgroundColor: tokens.color.blue100
+                backgroundColor: vars.color.blue100
             },
             orange: {
-                backgroundColor: tokens.color.orange100
+                backgroundColor: vars.color.orange100
             },
             red: {
-                backgroundColor: tokens.color.red100
+                backgroundColor: vars.color.red100
             },
             green: {
-                backgroundColor: tokens.color.green100
+                backgroundColor: vars.color.green100
             }
         },
         size: {
             sm: {
-                padding: tokens.padding.p16
+                padding: vars.padding.p16
             },
             md: {
-                padding: tokens.padding.p20
+                padding: vars.padding.p20
             },
             lg: {
-                padding: tokens.padding.p24
+                padding: vars.padding.p24
             }
         },
         shadow: {
             sm: {
-                boxShadow: tokens.shadow.sm
+                boxShadow: vars.shadow.sm
             },
             md: {
-                boxShadow: tokens.shadow.md
+                boxShadow: vars.shadow.md
             },
             lg: {
-                boxShadow: tokens.shadow.lg
+                boxShadow: vars.shadow.lg
             }
         }
     },
@@ -69,7 +69,7 @@ export const cardStyle = recipe({
                 variant: 'outlined'
             },
             style: {
-                border: `1px solid ${tokens.color.grey100}`
+                border: `1px solid ${vars.color.grey100}`
             }
         },
         {
@@ -78,7 +78,7 @@ export const cardStyle = recipe({
                 variant: 'outlined'
             },
             style: {
-                border: `1px solid ${tokens.color.blue100}`
+                border: `1px solid ${vars.color.blue100}`
             }
         },
         {
@@ -87,7 +87,7 @@ export const cardStyle = recipe({
                 variant: 'outlined'
             },
             style: {
-                border: `1px solid ${tokens.color.orange100}`
+                border: `1px solid ${vars.color.orange100}`
             }
         },
         {
@@ -96,7 +96,7 @@ export const cardStyle = recipe({
                 variant: 'outlined'
             },
             style: {
-                border: `1px solid ${tokens.color.red100}`
+                border: `1px solid ${vars.color.red100}`
             }
         },
         {
@@ -105,7 +105,7 @@ export const cardStyle = recipe({
                 variant: 'outlined'
             },
             style: {
-                border: `1px solid ${tokens.color.green100}`
+                border: `1px solid ${vars.color.green100}`
             }
         },
         {
@@ -114,8 +114,8 @@ export const cardStyle = recipe({
                 variant: 'soft'
             },
             style: {
-                border: `1px solid ${tokens.color.grey100}`,
-                backgroundColor: tokens.color.greyOpacity50
+                border: `1px solid ${vars.color.grey100}`,
+                backgroundColor: vars.color.greyOpacity50
             }
         },
         {
@@ -124,8 +124,8 @@ export const cardStyle = recipe({
                 variant: 'soft'
             },
             style: {
-                border: `1px solid ${tokens.color.blue100}`,
-                backgroundColor: tokens.color.blueOpacity50
+                border: `1px solid ${vars.color.blue100}`,
+                backgroundColor: vars.color.blueOpacity50
             }
         },
         {
@@ -134,8 +134,8 @@ export const cardStyle = recipe({
                 variant: 'soft'
             },
             style: {
-                border: `1px solid ${tokens.color.orange100}`,
-                backgroundColor: tokens.color.orangeOpacity50
+                border: `1px solid ${vars.color.orange100}`,
+                backgroundColor: vars.color.orangeOpacity50
             }
         },
         {
@@ -144,8 +144,8 @@ export const cardStyle = recipe({
                 variant: 'soft'
             },
             style: {
-                border: `1px solid ${tokens.color.red100}`,
-                backgroundColor: tokens.color.redOpacity50
+                border: `1px solid ${vars.color.red100}`,
+                backgroundColor: vars.color.redOpacity50
             }
         },
         {
@@ -154,8 +154,8 @@ export const cardStyle = recipe({
                 variant: 'soft'
             },
             style: {
-                border: `1px solid ${tokens.color.green100}`,
-                backgroundColor: tokens.color.greenOpacity50
+                border: `1px solid ${vars.color.green100}`,
+                backgroundColor: vars.color.greenOpacity50
             }
         },
         {
@@ -164,7 +164,7 @@ export const cardStyle = recipe({
                 variant: 'solid'
             },
             style: {
-                backgroundColor: tokens.color.grey100
+                backgroundColor: vars.color.grey100
             }
         },
         {
@@ -173,7 +173,7 @@ export const cardStyle = recipe({
                 variant: 'solid'
             },
             style: {
-                backgroundColor: tokens.color.blue100
+                backgroundColor: vars.color.blue100
             }
         },
         {
@@ -182,7 +182,7 @@ export const cardStyle = recipe({
                 variant: 'solid'
             },
             style: {
-                backgroundColor: tokens.color.orange100
+                backgroundColor: vars.color.orange100
             }
         },
         {
@@ -191,7 +191,7 @@ export const cardStyle = recipe({
                 variant: 'solid'
             },
             style: {
-                backgroundColor: tokens.color.red100
+                backgroundColor: vars.color.red100
             }
         },
         {
@@ -200,7 +200,7 @@ export const cardStyle = recipe({
                 variant: 'solid'
             },
             style: {
-                backgroundColor: tokens.color.green100
+                backgroundColor: vars.color.green100
             }
         }
     ],

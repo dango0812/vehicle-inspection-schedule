@@ -1,6 +1,6 @@
 import { style, createVar } from '@vanilla-extract/css';
 import { recipe, type RecipeVariants } from '@vanilla-extract/recipes';
-import tokens from '@styles/tokens';
+import { vars } from '@styles/theme.css';
 
 export const textVisibleVar = createVar();
 
@@ -14,46 +14,46 @@ export const buttonStyle = recipe({
         outline: 'none',
         userSelect: 'none',
         cursor: 'pointer',
-        borderRadius: tokens.radius.sm,
-        padding: `${tokens.padding.p6} ${tokens.padding.p12}`,
+        borderRadius: vars.radius.sm,
+        padding: `${vars.padding.p6} ${vars.padding.p12}`,
         transition: 'all 300ms ease-in-out'
     },
     variants: {
         variant: {
             solid: {
                 ':disabled': {
-                    color: tokens.color.grey400,
-                    backgroundColor: tokens.color.greyOpacity300,
+                    color: vars.color.grey400,
+                    backgroundColor: vars.color.greyOpacity300,
                     cursor: 'not-allowed'
                 }
             },
             soft: {
                 ':disabled': {
-                    color: tokens.color.grey400,
-                    backgroundColor: tokens.color.greyOpacity300,
+                    color: vars.color.grey400,
+                    backgroundColor: vars.color.greyOpacity300,
                     cursor: 'not-allowed'
                 }
             }
         },
         color: {
             black: {
-                color: tokens.color.white
+                color: vars.color.white
             },
             grey: {
-                color: tokens.color.grey700
+                color: vars.color.grey700
             },
             blue: {
-                color: tokens.color.blue700
+                color: vars.color.blue700
             },
             orange: {
-                color: tokens.color.orange700
+                color: vars.color.orange700
 
             },
             red: {
-                color: tokens.color.red700
+                color: vars.color.red700
             },
             green: {
-                color: tokens.color.green700
+                color: vars.color.green700
             }
         },
         size: {
@@ -95,12 +95,12 @@ export const buttonStyle = recipe({
                 variant: 'solid'
             },
             style: {
-                backgroundColor: tokens.color.black,
+                backgroundColor: vars.color.black,
                 ':hover': {
-                    backgroundColor: tokens.color.blackOpacity800
+                    backgroundColor: vars.color.blackOpacity800
                 },
                 ':active': {
-                    backgroundColor: tokens.color.blackOpacity800
+                    backgroundColor: vars.color.blackOpacity800
                 }
             }
         },
@@ -110,12 +110,12 @@ export const buttonStyle = recipe({
                 variant: 'solid'
             },
             style: {
-                backgroundColor: tokens.color.grey200,
+                backgroundColor: vars.color.grey200,
                 ':hover': {
-                    backgroundColor: tokens.color.grey300
+                    backgroundColor: vars.color.grey300
                 },
                 ':active': {
-                    backgroundColor: tokens.color.grey300
+                    backgroundColor: vars.color.grey300
                 }
             }
         },
@@ -125,12 +125,12 @@ export const buttonStyle = recipe({
                 variant: 'solid'
             },
             style: {
-                backgroundColor: tokens.color.blue200,
+                backgroundColor: vars.color.blue200,
                 ':hover': {
-                    backgroundColor: tokens.color.blue300
+                    backgroundColor: vars.color.blue300
                 },
                 ':active': {
-                    backgroundColor: tokens.color.blue300
+                    backgroundColor: vars.color.blue300
                 }
             }
         },
@@ -140,12 +140,12 @@ export const buttonStyle = recipe({
                 variant: 'solid'
             },
             style: {
-                backgroundColor: tokens.color.orange200,
+                backgroundColor: vars.color.orange200,
                 ':hover': {
-                    backgroundColor: tokens.color.orange300
+                    backgroundColor: vars.color.orange300
                 },
                 ':active': {
-                    backgroundColor: tokens.color.orange300
+                    backgroundColor: vars.color.orange300
                 }
             }
         },
@@ -155,12 +155,12 @@ export const buttonStyle = recipe({
                 variant: 'solid'
             },
             style: {
-                backgroundColor: tokens.color.red200,
+                backgroundColor: vars.color.red200,
                 ':hover': {
-                    backgroundColor: tokens.color.red300
+                    backgroundColor: vars.color.red300
                 },
                 ':active': {
-                    backgroundColor: tokens.color.red300
+                    backgroundColor: vars.color.red300
                 }
             }
         },
@@ -170,12 +170,12 @@ export const buttonStyle = recipe({
                 variant: 'solid'
             },
             style: {
-                backgroundColor: tokens.color.green200,
+                backgroundColor: vars.color.green200,
                 ':hover': {
-                    backgroundColor: tokens.color.green300
+                    backgroundColor: vars.color.green300
                 },
                 ':active': {
-                    backgroundColor: tokens.color.green300
+                    backgroundColor: vars.color.green300
                 }
             }
         },
@@ -185,12 +185,12 @@ export const buttonStyle = recipe({
                 variant: 'soft'
             },
             style: {
-                backgroundColor: tokens.color.blackOpacity800,
+                backgroundColor: vars.color.blackOpacity800,
                 ':hover': {
-                    backgroundColor: tokens.color.black
+                    backgroundColor: vars.color.black
                 },
                 ':active': {
-                    backgroundColor: tokens.color.black
+                    backgroundColor: vars.color.black
                 }
             }
         },
@@ -200,12 +200,12 @@ export const buttonStyle = recipe({
                 variant: 'soft'
             },
             style: {
-                backgroundColor: tokens.color.grey100,
+                backgroundColor: vars.color.grey100,
                 ':hover': {
-                    backgroundColor: tokens.color.grey200
+                    backgroundColor: vars.color.grey200
                 },
                 ':active': {
-                    backgroundColor: tokens.color.grey200
+                    backgroundColor: vars.color.grey200
                 }
             }
         },
@@ -215,12 +215,12 @@ export const buttonStyle = recipe({
                 variant: 'soft'
             },
             style: {
-                backgroundColor: tokens.color.blue100,
+                backgroundColor: vars.color.blue100,
                 ':hover': {
-                    backgroundColor: tokens.color.blue200
+                    backgroundColor: vars.color.blue200
                 },
                 ':active': {
-                    backgroundColor: tokens.color.blue200
+                    backgroundColor: vars.color.blue200
                 }
             }
         },
@@ -230,12 +230,12 @@ export const buttonStyle = recipe({
                 variant: 'soft'
             },
             style: {
-                backgroundColor: tokens.color.orange100,
+                backgroundColor: vars.color.orange100,
                 ':hover': {
-                    backgroundColor: tokens.color.orange200
+                    backgroundColor: vars.color.orange200
                 },
                 ':active': {
-                    backgroundColor: tokens.color.orange200
+                    backgroundColor: vars.color.orange200
                 }
             }
         },
@@ -245,12 +245,12 @@ export const buttonStyle = recipe({
                 variant: 'soft'
             },
             style: {
-                backgroundColor: tokens.color.red100,
+                backgroundColor: vars.color.red100,
                 ':hover': {
-                    backgroundColor: tokens.color.red200
+                    backgroundColor: vars.color.red200
                 },
                 ':active': {
-                    backgroundColor: tokens.color.red200
+                    backgroundColor: vars.color.red200
                 }
             }
         },
@@ -260,12 +260,12 @@ export const buttonStyle = recipe({
                 variant: 'soft'
             },
             style: {
-                backgroundColor: tokens.color.green100,
+                backgroundColor: vars.color.green100,
                 ':hover': {
-                    backgroundColor: tokens.color.green200
+                    backgroundColor: vars.color.green200
                 },
                 ':active': {
-                    backgroundColor: tokens.color.green200
+                    backgroundColor: vars.color.green200
                 }
             }
         }
@@ -279,10 +279,10 @@ export const buttonStyle = recipe({
 });
 
 export const buttonTextStyle = style({
-    fontSize: tokens.font.size.s16,
-    fontWeight: tokens.font.weight.semiBold,
-    lineHeight: tokens.font.lineHeight.medium,
-    letterSpacing: tokens.font.letterSpacing.normal,
+    fontSize: vars.font.size.s16,
+    fontWeight: vars.font.weight.semiBold,
+    lineHeight: vars.font.lineHeight.medium,
+    letterSpacing: vars.font.letterSpacing.normal,
     visibility: textVisibleVar
 });
 

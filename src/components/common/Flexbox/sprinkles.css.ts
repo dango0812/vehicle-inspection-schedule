@@ -1,5 +1,5 @@
 import { defineProperties, createSprinkles } from '@vanilla-extract/sprinkles';
-import tokens from '@styles/tokens';
+import { vars } from '@styles/theme.css';
 
 const flexProperties = defineProperties({
     properties: {
@@ -10,7 +10,7 @@ const flexProperties = defineProperties({
         alignItems: ['normal', 'stretch', 'flex-start', 'flex-end', 'center', 'baseline'],
         alignContent: ['normal', 'stretch', 'flex-start', 'flex-end', 'center', 'space-between'],
         alignSelf: ['auto', 'flex-start', 'flex-end', 'center', 'stretch'],
-        gap: tokens.gap,
+        gap: vars.gap,
         flex: ['none', 'auto', 'initial', '1'],
         flexGrow: [0, 1, 2],
         flexBasis: ['auto', 'min-content', 'max-content', 'content', 'fit-content'],
