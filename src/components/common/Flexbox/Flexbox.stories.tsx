@@ -1,7 +1,7 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
-import { vars } from '@styles/theme.css';
+import tokens from '@styles/tokens';
 
 import { Flexbox, type FlexboxProps } from './Flexbox';
 
@@ -31,7 +31,7 @@ const meta: Meta<FlexboxProps> = {
         },
         gap: {
             control: 'select',
-            options: Object.keys(vars.gap || {})
+            options: Object.keys(tokens.gap || {})
         }
     },
     args: {
@@ -40,8 +40,8 @@ const meta: Meta<FlexboxProps> = {
             ...Array(3).fill(0).map((_, index) => React.createElement('div', {
                 key: index,
                 style: {
-                    backgroundColor: index % 2 === 0 ? vars.color.grey200 : vars.color.blackOpacity200,
-                    padding: vars.padding.p8
+                    backgroundColor: index % 2 === 0 ? tokens.color.grey200 : tokens.color.blackOpacity200,
+                    padding: tokens.padding.p8
                 }
             }, `Item ${index + 1}`))
         )

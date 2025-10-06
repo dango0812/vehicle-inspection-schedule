@@ -1,8 +1,4 @@
 const colors = {
-    primary: 'var(--color-black)',
-    primaryHover: 'var(--color-black-opactit)',
-    primaryActive: 'var(--color-green700)',
-
     white: '#fff',
     whiteOpacity50: 'rgba(255,255,255,0.05)',
     whiteOpacity100: 'rgba(255,255,255,0.1)',
